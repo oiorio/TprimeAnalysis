@@ -166,9 +166,9 @@ var2d       = vars2D        # ---> variables.py
     
 Top_Resolved_wp = { "10%": 0.425, "5%": 0.625,}
 Top_Mixed_wp    = { "10%": 0.900, "5%": 0.950,}
-Top_Merged_wp   = { "10%": 0.85, "5%": 0.950,}
-#Top_Merged_wp   = { "10%": 0.25, "5%": 0.850,}
-#Top_Merged_wp   = { "10%": 0.075, "5%": 0.250,}
+#Top_Merged_wp   = { "10%": 0.85, "5%": 0.950,}#orso's version
+#Top_Merged_wp   = { "10%": 0.25, "5%": 0.850,}#orso's version
+Top_Merged_wp   = { "10%": 0.075, "5%": 0.250,}
 
 TopSF_CorrLibFilePath_dict = {
                                 "2022":             "",
@@ -403,7 +403,7 @@ def select_top(df, isMC, year):
                                  .Define("LooseNOTTightTopRes_idx", f"SubtractIntVectors(LooseTopRes_idx, TightTopRes_idx)")
     
     df_nTops = df_goodtopRes.Define("nLooseTopResolved", "nTop(LooseTopRes_idx)")\
-                            .Define("nLooseTopMixed", "nTop(LooseTopMix_idx)")\
+-                            .Define("nLooseTopMixed", "nTop(LooseTopMix_idx)")\
                             .Define("nLooseTopMerged", "nTop(LooseTopMer_idx)")\
                             .Define("nTightTopResolved", "nTop(TightTopRes_idx)")\
                             .Define("nTightTopMixed", "nTop(TightTopMix_idx)")\
