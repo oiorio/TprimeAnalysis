@@ -44,9 +44,15 @@ if(uid == 0):
 if not os.path.exists("/tmp/x509up_u" + str(uid)):
     os.system('voms-proxy-init --rfc --voms cms -valid 192:00')
 print("what")
-cert_loc_path="/afs/cern.ch/user/" + inituser + "/" + username + "/private/x509up_u"+str(uid)
-os.popen("cp /tmp/x509up_u" + str(uid) +" " + cert_loc_path)
-os.popen("chmod 400 "+cert_loc_path)
+cert_loc_path="/afs/cern.ch/user/" + inituser + "/" + username + "/private/x509up"#+"_u"+str(uid)
+
+#if os.path.exists(cert_loc_path):
+#    os.system("chmod a+xwr "+cert_loc_path)
+#    os.system("rm "+cert_loc_path)
+
+#os.popen("cp /tmp/x509up_u" + str(uid) +" "+"/afs/cern.ch/user/" + inituser + "/" + username + "/private/" )
+os.popen("cp /tmp/x509up_u" + str(uid) +" "+cert_loc_path)
+
 print(cert_loc_path)
 
 # insert here the name of output folder

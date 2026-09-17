@@ -140,8 +140,8 @@ def runner_writer(run_folder, dataset, dict_samples_file, hist_folder, nfiles_ma
         f.write('echo "PWD at start: $(pwd)"\n')
 
         f.write("cd /afs/cern.ch/user/" + inituser + "/" + username + "/\n")
-        f.write("source setANRun3Workspace.sh\n")
-#       f.write("source analysis_TPrime.sh\n")
+        #f.write("source setANRun3Workspace.sh\n")
+        f.write("source analysis_TPrime.sh\n")
         f.write("cd python/postprocessing/postselection/\n\n")
 
         f.write(f'base_tmp="{base_tmp}"\n')
