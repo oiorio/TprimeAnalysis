@@ -1,0 +1,91 @@
+outputfolder:
+  postselector_results: { 
+    "2024":         "/eos/user/o/oiorio/tDM/Merged/",
+    }
+  triggerSF_results: { 
+    "2024":         "/eos/user/o/oiorio/tDM/TriggerSF/",
+     }
+
+dict_samples:
+  "2024":             "../samples/dict_samples_2024_acp.json" 
+
+plotting:
+  lumi_dict:
+    {
+      "2024":   100.00
+    }
+
+  folder_dict:
+    {
+      "2024":               "/eos/user/o/oiorio/tDM/Merged/",
+    }
+
+  folder_www_dict:
+    {
+      "2024":               "/eos/user/o/oiorio/tDM/Merged/",
+    }
+
+  datasets_to_plot:
+    {
+      "2024":
+              [
+ "DataJetMET_2024",
+ "QCD_2024",
+ "ZJetsToNuNu_2jets_2024",
+ "WJets_2jets_2024",
+ "TW_2024",
+ "TT_2024"
+],
+    }
+    
+  systematics:
+    {
+      "2024":           [],
+    }
+
+  scale_signals: 1
+
+TrotaScaleFactor:
+  outputfolder: {
+    "Resolved": {
+                  "2022":         "",
+                  "2022EE":       "",
+                  "2023":         "",
+                  "2023postBPix": "",
+                },
+    "Mixed": {
+                  "2022":         "",
+                  "2022EE":       "",
+                  "2023":         "",
+                  "2023postBPix": "",
+                },
+    "Merged": {
+                  "2022":         "",
+                  "2022EE":       "",
+                  "2023":         "",
+                  "2023postBPix": "",
+                },
+    }
+    
+  fit_variable: {
+    "ResolvedLoose":                "MT_W",
+    "ResolvedLooseButNotTight":     "MT_W",
+    "ResolvedTight":                "MT_W",
+    "MixedLoose":                   "MT_W",
+    "MixedLooseButNotTight":        "MT_W",
+    "MixedTight":                   "MT_W",
+    "MergedLoose":                  "MT_W",
+    "MergedLooseButNotTight":       "MT_W",
+    "MergedTight":                  "MT_W",
+  }
+
+  corrlibfolder: {
+    "2024":         "",
+  }
+
+  systematics:
+    {
+      "2024":           [],
+    }
+
+  scale_signals: 1

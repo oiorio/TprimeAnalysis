@@ -1,0 +1,132 @@
+{
+  "ZJetsToNuNu_2024": {
+    "ZJetsToNuNu_HT100to200_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT100to200_2024/20260911_175856/tree_hadd_0.root",
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT100to200_2024/20260911_175856/tree_hadd_1.root",
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT100to200_2024/20260911_175856/tree_hadd_2.root"
+      ],
+      "ntot": [
+        234710,
+        147585,
+        156378
+      ]
+    },
+    "ZJetsToNuNu_HT200to400_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT200to400_2024/20260911_175856/tree_hadd_0.root",
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT200to400_2024/20260911_175856/tree_hadd_1.root",
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT200to400_2024/20260911_175856/tree_hadd_2.root"
+      ],
+      "ntot": [
+        270495,
+        143011,
+        272629
+      ]
+    },
+    "ZJetsToNuNu_HT400to800_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT400to800_2024/20260911_175856/tree_hadd_0.root"
+      ],
+      "ntot": [
+        80209
+      ]
+    },
+    "ZJetsToNuNu_HT800to1500_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT800to1500_2024/20260911_175856/tree_hadd_1.root"
+      ],
+      "ntot": [
+        15053
+      ]
+    },
+    "ZJetsToNuNu_HT1500to2500_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT1500to2500_2024/20260911_175856/tree_hadd_0.root",
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT1500to2500_2024/20260911_175856/tree_hadd_1.root"
+      ],
+      "ntot": [
+        1310,
+        1351
+      ]
+    },
+    "ZJetsToNuNu_HT2500_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT2500_2024/20260911_175856/tree_hadd_2.root"
+      ],
+      "ntot": [
+        40148
+      ]
+    }
+  },
+  "ZJetsToNuNu_HT100to200_2024": {
+    "ZJetsToNuNu_HT100to200_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT100to200_2024/20260911_175856/tree_hadd_0.root",
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT100to200_2024/20260911_175856/tree_hadd_1.root",
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT100to200_2024/20260911_175856/tree_hadd_2.root"
+      ],
+      "ntot": [
+        234710,
+        147585,
+        156378
+      ]
+    }
+  },
+  "ZJetsToNuNu_HT200to400_2024": {
+    "ZJetsToNuNu_HT200to400_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT200to400_2024/20260911_175856/tree_hadd_0.root",
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT200to400_2024/20260911_175856/tree_hadd_1.root",
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT200to400_2024/20260911_175856/tree_hadd_2.root"
+      ],
+      "ntot": [
+        270495,
+        143011,
+        272629
+      ]
+    }
+  },
+  "ZJetsToNuNu_HT400to800_2024": {
+    "ZJetsToNuNu_HT400to800_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT400to800_2024/20260911_175856/tree_hadd_0.root"
+      ],
+      "ntot": [
+        80209
+      ]
+    }
+  },
+  "ZJetsToNuNu_HT800to1500_2024": {
+    "ZJetsToNuNu_HT800to1500_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT800to1500_2024/20260911_175856/tree_hadd_1.root"
+      ],
+      "ntot": [
+        15053
+      ]
+    }
+  },
+  "ZJetsToNuNu_HT1500to2500_2024": {
+    "ZJetsToNuNu_HT1500to2500_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT1500to2500_2024/20260911_175856/tree_hadd_0.root",
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT1500to2500_2024/20260911_175856/tree_hadd_1.root"
+      ],
+      "ntot": [
+        1310,
+        1351
+      ]
+    }
+  },
+  "ZJetsToNuNu_HT2500_2024": {
+    "ZJetsToNuNu_HT2500_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/fscrivan/Run3Analysis_Tprime/ZJetsToNuNu_HT2500_2024/20260911_175856/tree_hadd_2.root"
+      ],
+      "ntot": [
+        40148
+      ]
+    }
+  }
+}

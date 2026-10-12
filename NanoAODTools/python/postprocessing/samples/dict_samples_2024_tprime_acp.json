@@ -1,0 +1,92 @@
+{
+  "TprimeToTZ_800_2024": {
+    "TprimeToTZ_800_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_7.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_3.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_6.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_11.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_8.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_9.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_0.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_1.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_4.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_2.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_10.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_12.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_13.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_800_2024/20260910_192513/tree_hadd_5.root"
+      ],
+      "ntot": [
+        2000,
+        14000,
+        19000,
+        16000,
+        1000,
+        7000,
+        45000,
+        22000,
+        35000,
+        44000,
+        31000,
+        16000,
+        11000,
+        137000
+      ]
+    }
+  },
+  "TprimeToTZ_1000_2024": {
+    "TprimeToTZ_1000_2024": {
+      "strings": [
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_7.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_3.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_6.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_11.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_18.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_8.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_16.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_9.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_0.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_1.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_21.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_14.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_4.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_15.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_2.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_10.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_12.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_17.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_19.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_13.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_22.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_20.root",
+        "root://xrootd-cms.infn.it//store/user/apuglia/Run3Analysis_Tprime/TprimeToTZ_1000_2024/20260910_192610/tree_hadd_5.root"
+      ],
+      "ntot": [
+        2000,
+        5000,
+        99000,
+        1000,
+        9000,
+        2000,
+        1000,
+        1000,
+        16000,
+        7000,
+        7000,
+        18000,
+        21000,
+        1000,
+        53000,
+        8000,
+        2000,
+        18000,
+        13000,
+        2000,
+        103000,
+        2000,
+        8000
+      ]
+    }
+  }
+}

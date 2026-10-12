@@ -32,6 +32,12 @@ parser.add_option(      '--noTrotaSF',          dest='noTrotaSF',           acti
 parser.add_option(      '--tmpfold',            dest='tmpfold',             action='store_true',    default=False,                                  help='test tmp folder for out file')
 parser.add_option(      '--printcutflow',       dest='printcutflow',        action='store_true',    default=False,                                  help='print cutflow')
 
+parser.add_option(      '--partsize',       dest='partsize',        type=int,    default=-1,                                  help='number of files to run for a given portion To use if you are doing the a-priori splitting option, together with firstfile  ')
+
+parser.add_option(      '--firstfile',       dest='firstfile',        type=int,    default=0,                                  help='fist file to run in the dataset, to use together with partsize')
+
+parser.add_option(      '--npart',       dest='npart',        type=int,    default=1,                                  help='part number of the dataset for the outfile, to use together with partsize')
+
 
 (opt, args)             = parser.parse_args()
 in_dataset              = opt.datasets.split(",")
@@ -51,8 +57,11 @@ if do_variations:
     do_snapshot         = False
 remote_subfolder_name   = datetime.now().strftime("%Y%m%d") #20231229
 
+partsize=opt.partsize
+firstfile=opt.firstfile
+npart=opt.npart
 
-
+partname="" if partsize==-1 else "_part"+str(npart)
 
 if do_variations == True:
     variations          = ["nominal", "pu", "jer", "jesTotal", "pdf_total", "QCDScale", "ISR", "FSR"]
@@ -166,9 +175,9 @@ var2d       = vars2D        # ---> variables.py
     
 Top_Resolved_wp = { "10%": 0.425, "5%": 0.625,}
 Top_Mixed_wp    = { "10%": 0.900, "5%": 0.950,}
-#Top_Merged_wp   = { "10%": 0.85, "5%": 0.950,}#orso's version
-#Top_Merged_wp   = { "10%": 0.25, "5%": 0.850,}#orso's version
-Top_Merged_wp   = { "10%": 0.075, "5%": 0.250,}
+Top_Merged_wp   = { "10%": 0.85, "5%": 0.950,}
+#Top_Merged_wp   = { "10%": 0.25, "5%": 0.850,}
+#Top_Merged_wp   = { "10%": 0.075, "5%": 0.250,}
 
 TopSF_CorrLibFilePath_dict = {
                                 "2022":             "",
@@ -191,7 +200,8 @@ datasets = []
 for in_d in in_dataset:
     if not in_d in sample_dict.keys():
         print("Check the in_dataset string... ", sample_dict.keys())
-    else: 
+    else:
+        print("Dataset is ", in_d, "sample is ", sample_dict[in_d])
         datasets.append(sample_dict[in_d])
 print("Datasets to process: ", [d.label for d in datasets])
 
@@ -217,27 +227,37 @@ for d in datasets:
             repohisto_tmp = "/tmp/"+username+"/"+os.path.basename(os.path.normpath(hist_folder))+"/"+s.label+"/"
             if not os.path.exists(repohisto_tmp):
                 os.makedirs(repohisto_tmp)
-
-            outfile_path = repohisto_tmp+s.label+'.root'
+            outfile_path = repohisto_tmp+s.label+partname+'.root'
+            print("outfile path is: ",outfile_path)
         else:
-            outfile_path = repohisto+s.label+'.root'
+            outfile_path = repohisto+s.label+partname+'.root'
 
         outfile_dict[s.label] = outfile_path
     chain[d.label]          = {}
     ntot_events[d.label]    = {}
     tchains[d.label]        = {}
     for s in samples_list:
-        nfiles              = nfiles_max
+        totfiles = (len(samples[d.label][s.label]['strings']))
+        nfiles = min(nfiles_max,totfiles)
+        nstart=0
+        nend= nfiles_max
+        if(partsize>-1):
+            nstart=firstfile 
+            nend=firstfile+partsize
+            print(" firstfile n ",nstart," lastfile n ",nend)
         for i, string in enumerate(samples[d.label][s.label]['strings']):
             # samples[d.label][s.label]['strings'][i] = string.replace("root://cms-xrd-global.cern.ch/", "davs://stwebdav.pi.infn.it:8443/cms/") # root://stormgf2.pi.infn.it/
             samples[d.label][s.label]['strings'][i] = string.replace("root://cms-xrd-global.cern.ch/", "root://xrootd-cms.infn.it/") # root://stormgf2.pi.infn.it/
-        chain[d.label][s.label] = samples[d.label][s.label]['strings'][:nfiles]
+        chain[d.label][s.label] = samples[d.label][s.label]['strings'][nstart:nend]
         if not "Data" in s.label:
-            ntot_events[d.label][s.label] = np.sum(samples[d.label][s.label]['ntot'][:nfiles])
+            ntot_events[d.label][s.label] = np.sum(samples[d.label][s.label]['ntot'][0:totfiles])#the total weight is the one of the sum of all
+            #weights, assuming all histograms will be summed together. A better solution would be to book histograms for the weights
+            #and fix it in post, when summing histos together
+            #ntot_events[d.label][s.label] = np.sum(samples[d.label][s.label]['ntot'][nstart:nend])
         else:
             ntot_events[d.label][s.label] = None
         print("Dataset : "+s.label)
-        print("# of files to process : ", nfiles)
+        print("# of files to process : ", nstart-nend)
         if len(chain[d.label][s.label])>1:
             print("files strings :\n  {}\n  {}\n  ... \n  {}\n  {}".format(chain[d.label][s.label][0], chain[d.label][s.label][1], chain[d.label][s.label][-2], chain[d.label][s.label][-1]))
         else:
@@ -403,7 +423,7 @@ def select_top(df, isMC, year):
                                  .Define("LooseNOTTightTopRes_idx", f"SubtractIntVectors(LooseTopRes_idx, TightTopRes_idx)")
     
     df_nTops = df_goodtopRes.Define("nLooseTopResolved", "nTop(LooseTopRes_idx)")\
--                            .Define("nLooseTopMixed", "nTop(LooseTopMix_idx)")\
+                            .Define("nLooseTopMixed", "nTop(LooseTopMix_idx)")\
                             .Define("nLooseTopMerged", "nTop(LooseTopMer_idx)")\
                             .Define("nTightTopResolved", "nTop(TightTopRes_idx)")\
                             .Define("nTightTopMixed", "nTop(TightTopMix_idx)")\
